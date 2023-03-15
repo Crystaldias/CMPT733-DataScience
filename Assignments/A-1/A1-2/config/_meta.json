@@ -1,0 +1,8 @@
+{
+    "tables": [
+        "games",
+        "teams",
+        "portal",
+        "stadium"
+    ]
+}

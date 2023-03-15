@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "request": {
+        "url": "https://api.collegefootballdata.com/records/",
+        "method": "GET",
+        "authorization": {
+            "type": "Bearer"
+        },
+        "params": {
+           "year": false,
+           "team": false,
+           "conference": false
+        }
+    },    
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$.[*]",
+        "schema": {
+            "year": {
+                "target": "$.year",
+                "type": "integer"
+            },
+            "team": {
+                "target": "$.team",
+                "type": "string"
+            },
+            "conference": {
+                "target": "$.conference",
+                "type": "string"
+            },
+            "division": {
+              "target": "$.division",
+              "type" : "string"
+            },
+            "expectedWins": {
+              "target": "$.expectedWins",
+              "type" : "float"
+            }
+        },
+        "orient": "records"
+    
+    }
+}

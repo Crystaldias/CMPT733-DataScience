@@ -1,0 +1,33 @@
+{
+    "version": 1,
+    "request": {
+        "url": "https://api.collegefootballdata.com/teams",
+        "method": "GET",
+        "authorization": {
+            "type": "Bearer"
+        },
+        "params": {
+           
+        }
+    },    
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$.[*]",
+        "schema": {
+            "id": {
+                "target": "$.id",
+                "type": "string"
+            },
+            "school": {
+                "target": "$.school",
+                "type": "string"
+            },
+            "mascot": {
+                "target": "$.mascot",
+                "type": "string"
+            }
+        },
+        "orient": "records"
+    
+    }
+}

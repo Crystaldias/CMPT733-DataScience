@@ -1,0 +1,49 @@
+{
+    "version": 1,
+    "request": {
+        "url": "https://api.collegefootballdata.com/venues/",
+        "method": "GET",
+        "authorization": {
+            "type": "Bearer"
+        },
+        "params": {
+          
+        }
+       
+    },
+    "response": {
+        "ctype": "application/json",
+        "tablePath": "$.[*]",
+        "schema": {
+            "id": {
+                "target": "$.id",
+                "type": "int"
+            },
+            "name": {
+                "target": "$.name",
+                "type": "string"
+            },
+            "capacity": {
+                "target": "$.capacity",
+                "type": "int"
+            },
+            "city": {
+                "target": "$.city",
+                "type": "string"
+            },
+            "state": {
+                "target": "$.state",
+                "type": "string"
+            },
+            "country_code": {
+                "target": "$.country_code",
+                "type": "string"
+            },
+            "year_constructed": {
+                "target": "$.year_constructed",
+                "type": "int"
+            }
+        },
+        "orient": "records"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "tables": [
+        "games",
+        "records",
+        "venues"
+    ]
+}
